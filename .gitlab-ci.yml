@@ -2,7 +2,6 @@ pages:
     stage: deploy
     script:
     - mkdir .public
-    - cp -r template/* .public
     - cp -r *.html .public
     - cp -r js .public/
     - cp -r template-doc .public/
