@@ -7,7 +7,7 @@ pages:
     - cp -r js .public/
     - cp -r template-doc .public/
     - cp -r css .public/
-    - cp -r font .public/
+    - cp -r fonts .public/
     - cp -r images .public/
     - mv .public public
     artifacts:
