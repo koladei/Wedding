@@ -1,0 +1,28 @@
+{
+  "name": "kolade-ige",
+  "version": "1.0.0",
+  "description": "My personal site",
+  "main": "template/index.html",
+  "scripts": {
+    "test": "live-server template/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/koladei/kolade-ige.git"
+  },
+  "keywords": [
+    "profile",
+    "personal",
+    "kolade",
+    "ige"
+  ],
+  "author": "Kolade Ige",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/koladei/kolade-ige/issues"
+  },
+  "homepage": "https://gitlab.com/koladei/kolade-ige#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
