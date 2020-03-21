@@ -2,9 +2,7 @@ pages:
     stage: deploy
     script:
     - mkdir .public
-    - mkdir .public/assets
-    - cp -r assets/* .public/assets
-    - cp -r assets/index.html .public
+    - cp -r template/* .public
     - mv .public public
     artifacts:
         paths:
