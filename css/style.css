@@ -337,32 +337,38 @@ a:focus {
   z-index: 100;
 }
 
-.section-title, .section-title-white {
+.section-title,
+.section-title-white {
   text-align: center;
   margin-bottom: 60px;
   position: relative;
 }
 
 @media (max-width: 767px) {
-  .section-title, .section-title-white {
+  .section-title,
+  .section-title-white {
     margin-bottom: 50px;
   }
 }
 
-.section-title .vertical-line, .section-title-white .vertical-line {
+.section-title .vertical-line,
+.section-title-white .vertical-line {
   width: 18px;
   height: 42px;
   top: 0;
 }
 
 @media (max-width: 991px) {
-  .section-title .vertical-line, .section-title-white .vertical-line {
+  .section-title .vertical-line,
+  .section-title-white .vertical-line {
     height: 35px;
   }
 }
 
-.section-title .vertical-line, .section-title-white .vertical-line,
-.section-title .vertical-line span, .section-title-white .vertical-line span {
+.section-title .vertical-line,
+.section-title-white .vertical-line,
+.section-title .vertical-line span,
+.section-title-white .vertical-line span {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -372,7 +378,8 @@ a:focus {
   transform: translateX(-50%);
 }
 
-.section-title .vertical-line span, .section-title-white .vertical-line span {
+.section-title .vertical-line span,
+.section-title-white .vertical-line span {
   background: rgba(94, 154, 142, 0.2);
   width: 2px;
   height: 42px;
@@ -380,32 +387,37 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .section-title .vertical-line span, .section-title-white .vertical-line span {
+  .section-title .vertical-line span,
+  .section-title-white .vertical-line span {
     height: 35px;
   }
 }
 
 @media (max-width: 767px) {
-  .section-title .vertical-line span, .section-title-white .vertical-line span {
+  .section-title .vertical-line span,
+  .section-title-white .vertical-line span {
     height: 30px;
     top: 15px;
   }
 }
 
-.section-title .vertical-line span i, .section-title-white .vertical-line span i {
+.section-title .vertical-line span i,
+.section-title-white .vertical-line span i {
   position: absolute;
   left: -34px;
   top: -63px;
 }
 
 @media (max-width: 991px) {
-  .section-title .vertical-line span i, .section-title-white .vertical-line span i {
+  .section-title .vertical-line span i,
+  .section-title-white .vertical-line span i {
     left: -28px;
     top: -54px;
   }
 }
 
-.section-title .vertical-line span i:before, .section-title-white .vertical-line span i:before {
+.section-title .vertical-line span i:before,
+.section-title-white .vertical-line span i:before {
   margin: 0;
   font-size: 65px;
   font-size: 3.61111rem;
@@ -414,13 +426,15 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .section-title .vertical-line span i:before, .section-title-white .vertical-line span i:before {
+  .section-title .vertical-line span i:before,
+  .section-title-white .vertical-line span i:before {
     font-size: 55px;
     font-size: 3.05556rem;
   }
 }
 
-.section-title .vertical-line:before, .section-title-white .vertical-line:before {
+.section-title .vertical-line:before,
+.section-title-white .vertical-line:before {
   content: "";
   background: rgba(94, 154, 142, 0.2);
   width: 45px;
@@ -436,13 +450,15 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .section-title .vertical-line:before, .section-title-white .vertical-line:before {
+  .section-title .vertical-line:before,
+  .section-title-white .vertical-line:before {
     width: 40px;
     height: 2px;
   }
 }
 
-.section-title h2, .section-title-white h2 {
+.section-title h2,
+.section-title-white h2 {
   font-family: "Great Vibes", cursive;
   background-color: rgba(94, 154, 142, 0.1);
   font-size: 46px;
@@ -458,14 +474,16 @@ a:focus {
 }
 
 @media (max-width: 1199px) {
-  .section-title h2, .section-title-white h2 {
+  .section-title h2,
+  .section-title-white h2 {
     font-size: 40px;
     font-size: 2.22222rem;
   }
 }
 
 @media (max-width: 991px) {
-  .section-title h2, .section-title-white h2 {
+  .section-title h2,
+  .section-title-white h2 {
     font-size: 35px;
     font-size: 1.94444rem;
     margin-top: 52px;
@@ -473,7 +491,8 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .section-title h2, .section-title-white h2 {
+  .section-title h2,
+  .section-title-white h2 {
     font-size: 30px;
     font-size: 1.66667rem;
     padding: 8px 10px 3px;
@@ -482,7 +501,8 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .section-title h2, .section-title-white h2 {
+  .section-title h2,
+  .section-title-white h2 {
     margin-top: 45px;
   }
 }
@@ -498,7 +518,8 @@ a:focus {
   opacity: 0.4;
 }
 
-.section-title-white .vertical-line:before, .section-title-white .vertical-line:after {
+.section-title-white .vertical-line:before,
+.section-title-white .vertical-line:after {
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -527,7 +548,9 @@ a:focus {
   text-transform: uppercase;
 }
 
-.theme-btn:hover, .theme-btn:focus, .theme-btn:active {
+.theme-btn:hover,
+.theme-btn:focus,
+.theme-btn:active {
   background-color: #548a7f;
   color: #fff;
 }
@@ -1440,17 +1463,20 @@ a:focus {
 }
 
 /*** header style 1 ****/
-.header-style-1 .couple-logo, .header-style-2 .couple-logo {
+.header-style-1 .couple-logo,
+.header-style-2 .couple-logo {
   margin-top: 30px;
 }
 
 @media (max-width: 991px) {
-  .header-style-1 .couple-logo, .header-style-2 .couple-logo {
+  .header-style-1 .couple-logo,
+  .header-style-2 .couple-logo {
     margin-top: 0;
   }
 }
 
-.header-style-1 .couple-logo h1, .header-style-2 .couple-logo h1 {
+.header-style-1 .couple-logo h1,
+.header-style-2 .couple-logo h1 {
   font-family: "Great Vibes", cursive;
   font-size: 35px;
   font-size: 1.94444rem;
@@ -1459,33 +1485,39 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .header-style-1 .couple-logo h1, .header-style-2 .couple-logo h1 {
+  .header-style-1 .couple-logo h1,
+  .header-style-2 .couple-logo h1 {
     font-size: 30px;
     font-size: 1.66667rem;
   }
 }
 
-.header-style-1 .couple-logo .fi:before, .header-style-2 .couple-logo .fi:before {
+.header-style-1 .couple-logo .fi:before,
+.header-style-2 .couple-logo .fi:before {
   font-size: 25px;
   font-size: 1.38889rem;
 }
 
 @media (max-width: 991px) {
-  .header-style-1 .couple-logo .fi:before, .header-style-2 .couple-logo .fi:before {
+  .header-style-1 .couple-logo .fi:before,
+  .header-style-2 .couple-logo .fi:before {
     font-size: 20px;
     font-size: 1.11111rem;
   }
 }
 
-.header-style-1 .couple-logo a, .header-style-2 .couple-logo a {
+.header-style-1 .couple-logo a,
+.header-style-2 .couple-logo a {
   color: #5e9a8e;
 }
 
-.header-style-1 .navigation, .header-style-2 .navigation {
+.header-style-1 .navigation,
+.header-style-2 .navigation {
   border-bottom: 1px solid #ececec;
 }
 
-.header-style-1 .navigation:after, .header-style-2 .navigation:after {
+.header-style-1 .navigation:after,
+.header-style-2 .navigation:after {
   content: "";
   width: 100%;
   height: 1px;
@@ -1495,19 +1527,24 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .header-style-1 .navigation, .header-style-2 .navigation {
+  .header-style-1 .navigation,
+  .header-style-2 .navigation {
     padding: 15px;
   }
 }
 
-.header-style-1 #navbar ul li.current-menu-item > a, .header-style-2 #navbar ul li.current-menu-item > a,
-.header-style-1 #navbar ul > li.current-menu-ancestor li.current-menu-item > a, .header-style-2 #navbar ul > li.current-menu-ancestor li.current-menu-item > a,
-.header-style-1 #navbar ul > li.current-menu-ancestor > a, .header-style-2 #navbar ul > li.current-menu-ancestor > a {
+.header-style-1 #navbar ul li.current-menu-item > a,
+.header-style-2 #navbar ul li.current-menu-item > a,
+.header-style-1 #navbar ul > li.current-menu-ancestor li.current-menu-item > a,
+.header-style-2 #navbar ul > li.current-menu-ancestor li.current-menu-item > a,
+.header-style-1 #navbar ul > li.current-menu-ancestor > a,
+.header-style-2 #navbar ul > li.current-menu-ancestor > a {
   color: #5e9a8e;
 }
 
 @media screen and (min-width: 992px) {
-  .header-style-1 #navbar > ul > li > a, .header-style-2 #navbar > ul > li > a {
+  .header-style-1 #navbar > ul > li > a,
+  .header-style-2 #navbar > ul > li > a {
     font-size: 18px;
     font-size: 1rem;
     font-weight: 600;
@@ -1515,31 +1552,37 @@ a:focus {
     padding: 35px 17px;
     text-transform: uppercase;
   }
-  .header-style-1 #navbar > ul .sub-menu, .header-style-2 #navbar > ul .sub-menu {
+  .header-style-1 #navbar > ul .sub-menu,
+  .header-style-2 #navbar > ul .sub-menu {
     -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
   }
-  .header-style-1 #navbar > ul > li .sub-menu a, .header-style-2 #navbar > ul > li .sub-menu a {
+  .header-style-1 #navbar > ul > li .sub-menu a,
+  .header-style-2 #navbar > ul > li .sub-menu a {
     font-size: 16px;
     font-size: 0.88889rem;
     color: #413d3d;
     padding: 10px 15px;
   }
-  .header-style-1 #navbar > ul > li .sub-menu a:hover, .header-style-2 #navbar > ul > li .sub-menu a:hover {
+  .header-style-1 #navbar > ul > li .sub-menu a:hover,
+  .header-style-2 #navbar > ul > li .sub-menu a:hover {
     color: #5e9a8e;
   }
-  .header-style-1 #navbar > ul > li:last-child > ul, .header-style-2 #navbar > ul > li:last-child > ul {
+  .header-style-1 #navbar > ul > li:last-child > ul,
+  .header-style-2 #navbar > ul > li:last-child > ul {
     left: auto;
     right: 0;
   }
-  .header-style-1 #navbar > ul > li:last-child > .sub-menu .sub-menu, .header-style-2 #navbar > ul > li:last-child > .sub-menu .sub-menu {
+  .header-style-1 #navbar > ul > li:last-child > .sub-menu .sub-menu,
+  .header-style-2 #navbar > ul > li:last-child > .sub-menu .sub-menu {
     left: auto;
     right: 100%;
   }
 }
 
 @media (max-width: 991px) {
-  .header-style-1 .navbar-header button, .header-style-2 .navbar-header button {
+  .header-style-1 .navbar-header button,
+  .header-style-2 .navbar-header button {
     top: -2px;
     right: 0;
   }
@@ -1846,7 +1889,8 @@ a:focus {
   }
 }
 
-.hero .wedding-announcement .save-the-date:before, .hero .wedding-announcement .save-the-date:after {
+.hero .wedding-announcement .save-the-date:before,
+.hero .wedding-announcement .save-the-date:after {
   content: "";
   position: absolute;
   -webkit-border-radius: 50%;
@@ -3236,10 +3280,10 @@ a:focus {
   -o-filter: grayscale(60%);
   -ms-filter: grayscale(60%);
   filter: grayscale(60%);
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 767px) {
@@ -4063,4 +4107,98 @@ a:focus {
   border-radius: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*
+*
+* ==================================================
+* UNNECESSARY STYLE - JUST TO MAKE IT LOOKS NICE
+* ==================================================
+*
+*/
+.countdown {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.countdown span {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 3rem;
+  margin-left: 0.8rem;
+}
+
+.countdown span:first-of-type {
+  margin-left: 0;
+}
+
+.countdown-circles {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.countdown-circles span {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-circles span:first-of-type {
+  margin-left: 0;
+}
+
+/*
+*
+* ==================================================
+* FOR DEMO PURPOSES
+* ==================================================
+*
+*/
+body {
+  min-height: 100vh;
+}
+
+.bg-gradient-1 {
+  background: #7f7fd5;
+  background: -webkit-linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+}
+
+.bg-gradient-2 {
+  background: #654ea3;
+  background: -webkit-linear-gradient(to right, #654ea3, #eaafc8);
+  background: linear-gradient(to right, #654ea3, #eaafc8);
+}
+
+.bg-gradient-3 {
+  background: #ff416c;
+  background: -webkit-linear-gradient(to right, #ff416c, #ff4b2b);
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+.bg-gradient-4 {
+  background: #007991;
+  background: -webkit-linear-gradient(to right, #007991, #78ffd6);
+  background: linear-gradient(to right, #007991, #78ffd6);
+}
+
+.rounded {
+  border-radius: 1rem !important;
+}
+
+.btn-demo {
+  padding: 0.5rem 2rem !important;
+  border-radius: 30rem !important;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold !important;
+}
+
+.btn-demo:hover,
+.btn-demo:focus {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.5);
+}
