@@ -13,8 +13,8 @@ var browserSync = require('browser-sync').create();
 //     .pipe(gulp.dest("dist/js"));
 // gulp.src("node_modules/jqueryui/jquery-ui.min.css")
 //     .pipe(gulp.dest("dist/css"));
-// gulp.src("node_modules/bootstrap/dist/css/bootstrap.min.css")
-//     .pipe(gulp.dest("dist/css"));
+gulp.src("node_modules/bootstrap/dist/css/bootstrap.min.css")
+    .pipe(gulp.dest("dist/css"));
 // gulp.src("node_modules/font-awesome/fonts/*")
 //     .pipe(gulp.dest("dist/fonts"));
     

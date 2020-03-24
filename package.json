@@ -23,6 +23,10 @@
   },
   "homepage": "https://gitlab.com/koladei/kolade-ige#readme",
   "dependencies": {
+    "@babel/core": "^7.9.0",
+    "bootstrap": "^4.4.1",
+    "gulp": "^4.0.2",
+    "jquery": "^3.4.1",
     "live-server": "^1.2.1"
   },
   "devDependencies": {
