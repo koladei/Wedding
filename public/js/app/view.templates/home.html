@@ -1,0 +1,54 @@
+<!-- start page-wrapper -->
+<!-- <div class="page-wrapper"> -->
+
+<!-- start preloader -->
+<div class="preloader">
+    <div class="inner">
+        <span class="icon"><i class="fi flaticon-two"></i></span>
+    </div>
+</div>
+<!-- end preloader -->
+
+
+<!-- strat music-box -->
+<!-- <div class="music-box">
+        <button class="music-box-toggle-btn">
+            <i class="fa fa-music"></i>
+        </button>
+
+        <div class="music-holder">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/164820983&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+    </div> -->
+<!-- end music box -->
+
+
+<!-- start of hero -->
+<section ng-class="{'hero':$state.current.name == 'home.main'}" ui-view="banner">
+
+</section>
+<!-- end of hero slider -->
+
+<!-- Start header -->
+<header id="header" class="site-header header-style-1" ui-view="menu"></header>
+<!-- end of header -->
+<div ui-view="main"></div>
+
+<!-- start footer -->
+<footer class="site-footer">
+    <div class="back-to-top">
+        <a href="#" class="back-to-top-btn"><span><i class="fi flaticon-cupid"></i></span></a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>Forever and Always Our Love.</h2>
+                <span>- Mick (The groom)</span>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</footer>
+<!-- end footer -->
+
+<!-- </div> -->
