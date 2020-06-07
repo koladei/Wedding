@@ -1,12 +1,37 @@
 angular.module("Wedding.App", [])
     .config(Config)
     .run(Run)
-    .controller("MainCtrl", MainCtrl);
+    .controller("MainCtrl", MainCtrl)
+    .directive('validatePhone', function () {
+        return {
+            require: 'ngModel',
+            link: function (scope, element, attr, mCtrl) {
+                function myValidation(value) {
+                    var value2 = value.replace(/[\(\)]/gi, "");
+                    mCtrl.$setValidity('charE', (/((\+[\d]{1,3})([\d]{10}))|([\d]{11})/g).test(value2));
+                    //   if (value.indexOf("e") > -1) {
+                    //     mCtrl.$setValidity('charE', true);
+                    //   } else {
+                    //     mCtrl.$setValidity('charE', false);
+                    //   }
+                    console.log(value)
+                    return value;
+                }
 
-function MainCtrl($rootScope, $scope) {
+                mCtrl.$parsers.push(myValidation);
+            }
+        };
+    });
+
+function MainCtrl($rootScope, $scope, $window) {
     var vm = this;
-    vm.rsvpForm = {};
-    vm.rsvpFormData = {};
+    vm.rsvpForm = {
+        event:"The wedding ceremony"
+    };
+    vm.rsvpFormData = {
+        event:"The wedding ceremony"
+    };
+    vm.phonePattern = /^((\+[1-9][\d]{0,2})([\d]{10}))|([\d]{11})$/;
 
     vm.maids = [{
         url: "images/bridesmaid/img-1.jpg",
@@ -38,6 +63,21 @@ function MainCtrl($rootScope, $scope) {
         style: { backgroundImage: "url(images/bridesmaid/img-6.jpg)" },
         name: "Amaka",
         title: "Friend"
+    }, {
+        url: "images/bridesmaid/queen.jpeg",
+        style: { backgroundImage: "url(images/bridesmaid/queen.jpeg)" },
+        name: "Queen",
+        title: "Friend"
+    }, {
+        url: "images/bridesmaid/biodun.jpeg",
+        style: { backgroundImage: "url(images/bridesmaid/biodun.jpeg)" },
+        name: "Biodun",
+        title: "Friend"
+    }, {
+        url: "images/bridesmaid/ifeoma.jpeg",
+        style: { backgroundImage: "url(images/bridesmaid/ifeoma.jpeg)" },
+        name: "Ifeoma",
+        title: "Friend"
     }]
 
     vm.men = [{
@@ -65,10 +105,17 @@ function MainCtrl($rootScope, $scope) {
             submitData[key] = value == undefined ? "" : value;
         });
 
-        db.collection("rsvp").add(submitData)
-            .then(function (docRef) {
+        if ((/^([0][\d]{10})$/).test(submitData.phone)) {
+            submitData.phone = `+234${submitData.phone.substring(1)}`;
+        }
 
-                console.log(docRef.doc())
+        submitData.time = new Date().toISOString();
+        var key = `${submitData.phone}-${submitData.name.replace(/\s/gi, '')}`.toLowerCase();
+        db.collection("rsvp").doc(key).set(submitData)
+            .then(function (docRef) {
+                // $window.localStorage.setItem(key, docRef.id);
+
+                // console.log(docRef.doc())
                 angular.element("#rsvp-modal").modal({
                     show: true,
                     backdrop: "static"
@@ -85,7 +132,7 @@ function MainCtrl($rootScope, $scope) {
 
     return vm;
 }
-MainCtrl.$inject = ["$rootScope", "$scope"];
+MainCtrl.$inject = ["$rootScope", "$scope", "$window"];
 
 function Run($rootScope) {
 

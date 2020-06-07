@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "kolade-abiodun"
+    "default": "kolade-abiodun",
+    "prod": "kolade-abiodun"
   }
 }
