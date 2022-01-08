@@ -29,6 +29,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js"
         integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMT7QQ9Y6Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CMT7QQ9Y6Z');
+    </script>
+
     <!-- Bootstrap core CSS -->
     <!-- <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /> -->
@@ -56,11 +66,11 @@
 
 </head>
 
-<body id="home" ng-app="Wedding.App" ng-controller="MainCtrl as vm">
+<body id="home" ng-app="helloworld" ><!-- ng-controller="MainCtrl as vm"> -->
 
     <!-- <div class="container-fluid row"></div> -->
     <!-- start of hero -->
-    <section class="hero">
+    <section class="hero" style="z-index: 10;">
         <div class="hero-slider hero-slider-s1 d-none d-md-none d-lg-block">
             <div class="slide-item">
                 <img src="images/slider/OOJ_6726.jpg" alt class="slider-bg">
@@ -148,7 +158,7 @@
                 <li class="nav-item"><a class="nav-link" href="#story" style="font-size: 25px;">Story</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="#people" style="font-size: 25px;">Friends</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link gallery" href="#home" disabled style="font-size: 25px;">Gallery</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="#rsvp" style="font-size: 25px;">RSVP</a></li>
                 <li class="nav-item"><a class="nav-link" href="#gifts" style="font-size: 25px;">Gifts</a></li>
             </ul>
@@ -156,6 +166,12 @@
     </nav>
     <!-- end of header -->
 
+    <div class="container-fluid">
+        <a ui-sref="hello" ui-sref-active="active">Hello</a>
+    <a ui-sref="about" ui-sref-active="active">About</a>
+
+    <ui-view></ui-view>
+    </div>
 
     <!-- start page-wrapper -->
     <div class="container-fluid">
@@ -172,14 +188,14 @@
 
 
         <!-- strat music-box -->
-        <div class="music-box">
+        <div class="music-box" style="z-index: 2;">
             <button class="music-box-toggle-btn">
                 <i class="fa fa-music"></i>
             </button>
 
-            <div class="music-holder">
+            <div id="music-holder-id" class="music-holder">
                 <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/164820983&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/164820983&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"></iframe> -->
             </div>
         </div>
         <!-- end music box -->
@@ -559,8 +575,8 @@
                                     ng-model="vm.rsvpFormData.name" required>
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
-                                <input type="phone" name="phone" class="form-control"
-                                    placeholder="Phone: +1(301)10000000 / 08080000000" ng-pattern="vm.phonePattern"
+                                <input type="text" name="phone" class="form-control"
+                                    placeholder="Phone: +2348012345678 / 08012345678"  pattern="((\+234)([1-9][\d]{9}))|([\d]{11})"
                                     ng-model="vm.rsvpFormData.phone" requried>
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
@@ -568,8 +584,8 @@
                                     <option disabled selected value="">I'll be there *</option>
                                     <option value="1">Alone</option>
                                     <option value="2">with my buddy/spouse</option>
-                                    <option value="3">with 2 Buddies</option>
-                                    <option value="4">with 3 Buddies</option>
+                                    <option value="3" disabled>with 2 Buddies</option>
+                                    <option value="4" disabled>with 3 Buddies</option>
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
@@ -603,7 +619,7 @@
                             </button>
                         </div> -->
                         <div class="modal-body">
-                            <p>Thank you for planning to attend our party. We'll be glad to have you around.</p>
+                            <p>Thank you for your interest in our wedding. We'll let you know how you can safely participate.</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
@@ -744,6 +760,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.25/angular-ui-router.min.js"></script>
 
     <script>
+
         // TODO: Replace the following with your app's Firebase project configuration
         var firebaseConfig = {
             apiKey: "AIzaSyAReErKd_CW0iSgYzobpRdiUehn_06gUik",
